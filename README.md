@@ -1,2 +1,2 @@
-# GIPHY-Search
-GIPHY Search for @MakeSchool
+# GIPHY Search
+GIPHY Search website for [@MakeSchool](https://github.com/MakeSchool)
