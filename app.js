@@ -3,6 +3,7 @@ var express = require('express');
 var exphbs  = require('express-handlebars');
 var http    = require('http');
 var giphy   = require('giphy-api')()
+var path    = require('path')
 var app     = express();
 
 // MIDDLEWARE
