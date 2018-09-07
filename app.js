@@ -7,7 +7,14 @@ var app     = express();
 
 // MIDDLEWARE
 app.use(express.static('public'));
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+
+app.engine('handlebars', exphbs({
+    layoutsDir: path.join(__dirname, '/views/layouts/'),
+    partialsDir: path.join(__dirname, '/views/partials/'),
+    defaultLayout: 'main'
+}));
+
+app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'handlebars');
 
 // ROUTES
@@ -42,7 +49,12 @@ app.get('/', function (req, res) {
 //     res.render('greetings', {name: name});
 // })
 
-let port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log('App listening on port ' + port + '!');
-});
+if (require.main === module) {
+    let port = process.env.PORT || 3000;
+
+    app.listen(port, () => {
+        console.log('App listening on port ' + port + '!');
+    });
+}
+
+module.exports = app;
