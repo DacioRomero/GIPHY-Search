@@ -7,9 +7,10 @@ const http    = require('http');
 const giphy   = require('giphy-api')()
 const path    = require('path')
 
-const app = express();
+require('dotenv').config()
 
 // MIDDLEWARE
+const app = express();
 app.use(express.static('public'));
 
 app.engine('hbs', exphbs({

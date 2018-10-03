@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/DacioRomero/GIPHY-Search#readme",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "giphy-api": "^1.2.7"
