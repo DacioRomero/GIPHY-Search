@@ -7,7 +7,7 @@ const http    = require('http');
 const giphy   = require('giphy-api')()
 const path    = require('path')
 
-require('dotenv').config()
+require('dotenv').config({ path: path.join(__dirname, '.env') })
 
 // MIDDLEWARE
 const app = express();
